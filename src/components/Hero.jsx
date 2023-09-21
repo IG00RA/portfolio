@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { igoora, bwmap, worldmap } from "../assets";
+import { igoora, bwmap, worldmap } from "../img";
 import Particle from "./Particle";
 
 const Hero = () => {

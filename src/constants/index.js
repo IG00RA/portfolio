@@ -27,7 +27,7 @@ import {
   technologi,
   userDesign,
   crossPlatform,
-} from "../assets";
+} from "../img";
 
 export const navLinks = [
   {

@@ -7,7 +7,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { download, downloadHover, resume } from "../assets";
+import { download, downloadHover, resume } from "../img";
 import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => (
@@ -105,7 +105,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  "resume link", //paste the link to your resume here
+                  "https://drive.google.com/file/d/1pCsSkZZK2X1EVNhhM4oIItde0RXPquOg", //paste the link to your resume here
                   "_blank"
                 )
               }
