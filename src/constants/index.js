@@ -128,32 +128,46 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Front-End Developer",
+    title: "Web Developer",
     company_name: "GoIT",
     icon: goIt,
     iconBg: "#333333",
-    date: "Aug 2021 - Feb 2022",
+    date: "Sep 2022 - Dec 2022",
   },
   {
-    title: "Mentor (Volunteer)",
-    company_name: "Microverse",
+    title: "JavaScript Developer",
+    company_name: "GoIT",
     icon: goIt,
     iconBg: "#333333",
-    date: "Mar 2022 - May 2022",
+    date: "Jan 2023 - Mar 2023",
   },
   {
-    title: "Junior Software Engineer",
-    company_name: "Kelhel",
+    title: "ReactJS Developer",
+    company_name: "GoIT",
     icon: goIt,
     iconBg: "#333333",
-    date: "May 2022 - Oct 2022",
+    date: "Apr 2023 - Jun 2023",
+  },
+  {
+    title: "NodeJS Developer",
+    company_name: "GoIT",
+    icon: goIt,
+    iconBg: "#333333",
+    date: "Jun 2023 - Jul 2023",
+  },
+  {
+    title: "Team Leader",
+    company_name: "GoIT",
+    icon: goIt,
+    iconBg: "#333333",
+    date: "Sep 2023 - Aug 2023",
   },
   {
     title: "Full Stack Developer",
-    company_name: "Diversity Cyber Council",
+    company_name: "GoIT",
     icon: goIt,
     iconBg: "#333333",
-    date: "Sep 2022 - Present",
+    date: "Aug 2023 - Present",
   },
 ];
 
