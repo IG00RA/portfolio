@@ -1,4 +1,4 @@
-import Particles from "react-particles";
+import Particles from "tsparticles";
 import { loadFull } from "tsparticles";
 
 const Particle = () => {
