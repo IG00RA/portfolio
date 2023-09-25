@@ -8,11 +8,13 @@ import {
   Tech,
   Projects,
 } from "./components";
+import ScrollTop from "./components/ScrollTop/ScrollTop";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0">
+      <div className="relative z-0 overflow-x-hidden">
+        {/* <ScrollTop /> */}
         <div>
           <Navbar />
           <Hero />
@@ -42,6 +44,7 @@ const App = () => {
         <div className="relative z-0">
           <Contact />
         </div>
+        <ScrollTop />
       </div>
     </BrowserRouter>
   );
