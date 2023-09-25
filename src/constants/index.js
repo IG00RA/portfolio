@@ -160,14 +160,14 @@ const experiences = [
     company_name: "GoIT",
     icon: goIt,
     iconBg: "#333333",
-    date: "Sep 2023 - Aug 2023",
+    date: "Jul 2023 - Aug 2023",
   },
   {
     title: "Full Stack Developer",
     company_name: "GoIT",
     icon: goIt,
     iconBg: "#333333",
-    date: "Aug 2023 - Present",
+    date: "Aug 2023 - Sep 2023",
   },
 ];
 

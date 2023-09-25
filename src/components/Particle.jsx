@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
@@ -27,11 +26,18 @@ const Particle = () => {
   return (
     <>
       <Particles
-        id="section-particles"
-        className="my-particles"
+        // id="section-particles"
+        // className="my-particles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
+          style: {
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100wh",
+            height: "100wh",
+          },
           particles: {
             number: {
               value: 80,
@@ -46,16 +52,11 @@ const Particle = () => {
             shape: {
               type: "circle",
               stroke: {
-                width: 2,
-                color: "#000000",
+                width: 1,
+                color: "#383838",
               },
               polygon: {
                 nb_sides: 5,
-              },
-              image: {
-                src: "../img/fullStack.webp",
-                width: 100,
-                height: 100,
               },
             },
             opacity: {
@@ -69,11 +70,11 @@ const Particle = () => {
               },
             },
             size: {
-              value: 4,
+              value: 3,
               random: true,
               anim: {
                 enable: false,
-                speed: 40,
+                speed: 20,
                 size_min: 0.1,
                 sync: false,
               },
@@ -81,16 +82,16 @@ const Particle = () => {
             line_linked: {
               enable: true,
               distance: 150,
-              color: "#000000",
+              color: "#383838",
               opacity: 0.4,
               width: 1,
             },
             move: {
               enable: true,
-              speed: 1,
+              speed: 0.5,
               direction: "none",
-              random: false,
-              straight: false,
+              random: true,
+              straight: true,
               out_mode: "out",
               bounce: true,
               attract: {
