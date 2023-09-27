@@ -52,19 +52,30 @@
 }
 
 #about {
-  margin-left: -24px;
-  font-size: 100px;
+  font-size: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+#about:hover,
+#about:focus {
+  transform: scale(1.2);
 }
 
 #projects {
-  margin-left: -2px;
-  font-size: 100px;
+  font-size: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+#projects:hover,
+#projects:focus {
+  transform: scale(1.2);
 }
 
 #contact {
-  margin-left: -20px;
-  font-size: 95px;
-  letter-spacing: -2px;
+  font-size: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+#contact:hover,
+#contact:focus {
+  transform: scale(1.2);
 }
 
 .hero-heading {

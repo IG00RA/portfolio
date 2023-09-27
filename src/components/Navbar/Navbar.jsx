@@ -1,12 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { close, menu, logo, logotext } from "../img";
+import { styles } from "../../styles";
+import { navLinks } from "../../constants";
+import { close, menu, logo, logotext } from "../../img";
+import {
+  IconWrap,
+  NavLinks,
+  NavLinksWrap,
+  NavWrap,
+  StyledContacts,
+  StyledListItem,
+  StyledNav,
+  StyledSocial,
+} from "./Navbar.styled";
 
-const Navbar = () => {
+const Navbar = ({ toggle, setToggle }) => {
   const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
 
   return (
     <nav
@@ -51,42 +60,67 @@ const Navbar = () => {
         {/* mobile */}
         <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
           {toggle ? (
-            <div
+            <NavWrap
               className={`p-6 bg-flashWhite opacity-[0.98] absolute 
                 top-0 left-0 w-screen h-[100vh] z-10 menu ${
                   toggle ? "menu-open" : "menu-close"
                 }`}
             >
-              <div className="flex justify-end">
+              <IconWrap>
                 <img
                   src={close}
                   alt="close"
-                  className="w-[22px] h-[22px] object-contain cursor-pointer"
                   onClick={() => setToggle(!toggle)}
                 />
-              </div>
-              <ul
-                className="list-none flex flex-col -gap-[1rem] 
-                items-start justify-end mt-[10rem] -ml-[35px]"
-              >
-                {navLinks.map((nav) => (
-                  <li
-                    id={nav.id}
-                    key={nav.id}
-                    className={`${
-                      active === nav.title ? "text-french" : "text-eerieBlack"
-                    } text-[88px] font-bold font-arenq 
-                      uppercase tracking-[1px] cursor-pointer`}
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setActive(nav.title);
-                    }}
-                  >
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              </IconWrap>
+              <NavLinksWrap>
+                <StyledNav>
+                  {navLinks.map((nav) => (
+                    <StyledListItem
+                      id={nav.id}
+                      key={nav.id}
+                      active={active === nav.title}
+                      onClick={() => {
+                        setToggle(!toggle);
+                        setActive(nav.title);
+                      }}
+                    >
+                      <a href={`#${nav.id}`}>{nav.title}</a>
+                    </StyledListItem>
+                  ))}
+                </StyledNav>
+                <NavLinks>
+                  <StyledContacts>
+                    <li>
+                      <a href="tel:+380934861193">+38 093 48 61 193</a>
+                    </li>
+                    <a href="mailto:gromadskiyigor@gmail.com">
+                      gromadskiyigor@gmail.com
+                    </a>
+                  </StyledContacts>
+                  <StyledSocial>
+                    <li>
+                      <a
+                        href="https://t.me/igoora"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                      >
+                        Telegram
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/igoora/"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                      >
+                        LinkedIn
+                      </a>
+                    </li>
+                  </StyledSocial>
+                </NavLinks>
+              </NavLinksWrap>
+            </NavWrap>
           ) : (
             <img
               src={menu}

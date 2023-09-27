@@ -9,14 +9,23 @@ import {
   Projects,
 } from "./components";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
+import { useState } from "react";
 
 const App = () => {
+  const [toggle, setToggle] = useState(false);
+  if (toggle) {
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+  } else {
+    document.documentElement.style.overflow = "auto";
+    document.body.style.overflow = "auto";
+  }
+
   return (
     <BrowserRouter>
-      <div className="relative z-0 overflow-x-hidden">
-        {/* <ScrollTop /> */}
+      <div className={`relative z-0 overflow-x-hidden`}>
         <div>
-          <Navbar />
+          <Navbar toggle={toggle} setToggle={setToggle} />
           <Hero />
         </div>
 

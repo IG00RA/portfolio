@@ -39,9 +39,9 @@ export const BorderCircle = styled(animated.div)`
 export const ScrollToTopIcon = styled.div`
   color: #7a7a7a;
   font-size: 24px;
-  transition: transform 0.3s ease-in-out; /* Додайте анімацію збільшення */
+  transition: transform 0.3s ease-in-out;
 
   ${BorderCircle}:hover & {
-    transform: scale(1.4); /* Збільшуємо стрілку при наведенні на бордер */
+    transform: scale(1.4);
   }
 `;
