@@ -44,7 +44,7 @@ const Hero = () => {
             <StyledHeader
               className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}
             >
-              Hi, I'm <br className="sm:block hidden" />
+              Hi, I&apos;m <br className="sm:block hidden" />
               <span
                 className="sm:text-battleGray text-eerieBlack font-mova
                 font-extrabold uppercase"
@@ -57,7 +57,7 @@ const Hero = () => {
               dedicated to crafting elegant
               <br className="sm:hidden block" /> and functional applications.
               <br className="md:hidden block" />
-              Let's connect and discuss
+              Let&apos;s connect and discuss
               <br className="sm:hidden block" /> more about my skills and
               accomplishments.
             </StyledHeroText>
