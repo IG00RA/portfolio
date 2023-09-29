@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
@@ -38,12 +38,12 @@ const ProjectCard = ({
       />
 
       {active !== id ? (
-        <div className="flex items-center justify-start pr-[4.5rem]">
+        <div className="flex items-center justify-start pr-[6.5rem]">
           <h3
             className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
         whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
         absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
-        leading-none z-20"
+        leading-none z-20 transition duration-[0.3s] ease-in-out transform hover:scale-110"
           >
             {name}
           </h3>
@@ -58,13 +58,14 @@ const ProjectCard = ({
               <div
                 onClick={() => window.open(repo, "_blank")}
                 className="bg-night sm:w-11 sm:h-11 w-10 h-10 rounded-full 
-                  flex justify-center items-center cursor-pointer
-                  sm:opacity-[0.9] opacity-[0.8]"
+      flex justify-center items-center cursor-pointer
+      sm:opacity-[0.9] opacity-[0.8]"
               >
                 <img
                   src={github}
                   alt="source code"
-                  className="w-4/5 h-4/5 object-contain"
+                  className="w-4/5 h-4/5 object-contain transition-transform 
+                 transform scale-100 hover:scale-110"
                 />
               </div>
             </div>
@@ -89,7 +90,7 @@ const ProjectCard = ({
               whitespace-nowrap gap-1 sm:w-[138px] sm:h-[50px] 
               w-[125px] h-[46px] rounded-[10px] glassmorphism 
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
+              hover:text-eerieBlack transition duration-[0.3s] 
               ease-in-out"
               onClick={() => window.open(demo, "_blank")}
               onMouseOver={() => {
