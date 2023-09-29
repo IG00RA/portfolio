@@ -4,7 +4,7 @@ import whiteabstract from "./backgrounds/white-abstract.png";
 import worldmap from "./backgrounds/urkaine.jpg";
 
 import logo from "./logo/logo-black.webp";
-import logotext from "./logo/logo-text-black.webp";
+import logoText from "./logo/logo-text-black.webp";
 
 import igoora from "./personal/igoora.webp";
 
@@ -26,6 +26,8 @@ import menu from "./icons/menu.png";
 import resume from "./icons/resume.png";
 import send from "./icons/send.png";
 import sendHover from "./icons/sendHover.png";
+import phone from "./icons/phone.svg";
+import email from "./icons/email.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -70,7 +72,7 @@ export {
   whiteabstract,
   worldmap,
   logo,
-  logotext,
+  logoText,
   igoora,
   backend,
   ux,
@@ -102,4 +104,6 @@ export {
   typescript,
   spirit,
   technologi,
+  phone,
+  email,
 };
