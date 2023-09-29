@@ -28,7 +28,7 @@ const ProjectCard = ({
     >
       <div
         className="absolute top-0 left-0 z-10 bg-jetLight 
-      h-full w-full opacity-[0.5] rounded-[24px]"
+      h-full w-full opacity-[0.8] rounded-[24px]"
       ></div>
 
       <img
@@ -52,7 +52,7 @@ const ProjectCard = ({
         <>
           <div
             className="absolute bottom-0 p-8 justify-start w-full 
-            flex-col bg-[rgba(122,122,122,0.5)] rounded-b-[24px] z-20"
+            flex-col bg-[rgba(122,122,122,0.75)] rounded-b-[24px] z-20"
           >
             <div className="absolute inset-0 flex justify-end m-3">
               <div
@@ -122,7 +122,7 @@ const Projects = () => {
   const [active, setActive] = useState("project-2");
 
   return (
-    <div className="-mt-[6rem]">
+    <div>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>Case Studies</p>
         <h2 className={`${styles.sectionHeadTextLight}`}>Projects</h2>

@@ -186,9 +186,9 @@ const projects = [
   },
   {
     id: "project-2",
-    name: "Goose Task manager",
+    name: "Task manager",
     description:
-      "The GooseTrack application is a powerful tool for task planning and personal productivity tracking.",
+      "The GooseTrack application is a powerful tool for task planning.",
     tags: [
       {
         name: "react",
@@ -232,7 +232,7 @@ const projects = [
   {
     id: "project-4",
     name: "Car rent portal",
-    description: `DriveStar Car Rental. your premier destination for luxury car rentals. Explore our wide range of luxury vehicles and book your dream car today!`,
+    description: `DriveStar Car Rental. your premier destination for luxury car rentals.`,
     tags: [
       {
         name: "nextjs",
@@ -253,7 +253,7 @@ const projects = [
   },
   {
     id: "project-5",
-    name: "Fast image finder site",
+    name: "Fast image finder",
     description: "This is a demo website for a image finder portal.",
     tags: [
       {
@@ -320,8 +320,7 @@ const projects = [
   {
     id: "project-8",
     name: "Phone Book",
-    description:
-      "A simple phonebook with Swagger API register/log-in, add, remove/filter contacts",
+    description: "A simple phonebook with Swagger API",
     tags: [
       {
         name: "nextjs",
