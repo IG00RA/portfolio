@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { styles } from "../../styles";
 import { navLinks } from "../../constants";
-import { close, menu, logo, logotext } from "../../img";
+import { close, menu, logo, logoText, email, phone } from "../../img";
 import {
+  ContactItem,
   IconWrap,
   NavLink,
   NavLinks,
@@ -10,6 +11,7 @@ import {
   NavWrap,
   NavWrapper,
   StyledContacts,
+  StyledContactsLink,
   StyledDesktopListItem,
   StyledDesktopNav,
   StyledLink,
@@ -20,6 +22,7 @@ import {
   StyledNav,
   StyledSmallLogo,
   StyledSocial,
+  StyledSocialLink,
   StyledUl,
 } from "./Navbar.styled";
 
@@ -37,7 +40,7 @@ const Navbar = ({ toggle, setToggle }) => {
           }}
         >
           <StyledSmallLogo src={logo} alt="logo" />
-          <StyledLogoText src={logotext} alt="logo" />
+          <StyledLogoText src={logoText} alt="logo" />
         </StyledLink>
         <StyledUl>
           {navLinks.map((nav) => (
@@ -87,31 +90,37 @@ const Navbar = ({ toggle, setToggle }) => {
                 </StyledNav>
                 <NavLinks>
                   <StyledContacts>
-                    <li>
-                      <a href="tel:+380934861193">+38 093 48 61 193</a>
-                    </li>
-                    <a href="mailto:gromadskiyigor@gmail.com">
-                      gromadskiyigor@gmail.com
-                    </a>
+                    <ContactItem>
+                      <img src={phone} alt="phone icon" />
+                      <StyledContactsLink href="tel:+380934861193">
+                        +38 093 48 61 193
+                      </StyledContactsLink>
+                    </ContactItem>
+                    <ContactItem>
+                      <img src={email} alt="email icon" />
+                      <StyledContactsLink href="mailto:gromadskiyigor@gmail.com">
+                        gromadskiyigor@gmail.com
+                      </StyledContactsLink>
+                    </ContactItem>
                   </StyledContacts>
                   <StyledSocial>
                     <li>
-                      <a
+                      <StyledSocialLink
                         href="https://t.me/igoora"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
                         Telegram
-                      </a>
+                      </StyledSocialLink>
                     </li>
                     <li>
-                      <a
+                      <StyledSocialLink
                         href="https://www.linkedin.com/in/igoora/"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
                         LinkedIn
-                      </a>
+                      </StyledSocialLink>
                     </li>
                   </StyledSocial>
                 </NavLinks>

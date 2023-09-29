@@ -84,7 +84,7 @@ export const StyledSocial = styled.ul`
   li::before {
     content: "|";
     margin: 0 10px;
-    color: #000;
+    color: rgb(31 31 31);
   }
   li:first-child::before {
     content: "";
@@ -96,6 +96,72 @@ export const StyledContacts = styled.ul`
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
+`;
+
+export const ContactItem = styled.li`
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  img {
+    width: 20px;
+    height: 20px;
+    fill: rgb(31 31 31);
+    margin-right: 8px;
+  }
+`;
+
+export const StyledContactsLink = styled.a`
+  color: rgb(31 31 31);
+  font-size: 18px;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(31 31 31);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
+    background-color: rgb(31 31 31);
+  }
+`;
+
+export const StyledSocialLink = styled.a`
+  color: rgb(31 31 31);
+  font-family: "Mova";
+  font-size: 20px;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(31 31 31);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
+    background-color: rgb(31 31 31);
+  }
 `;
 
 export const StyledNav = styled.ul`
@@ -115,7 +181,11 @@ export const StyledListItem = styled.li`
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: color 0.3s ease;
   &.active {
+    color: rgb(181 181 186);
+  }
+  &:hover {
     color: rgb(181 181 186);
   }
 `;
