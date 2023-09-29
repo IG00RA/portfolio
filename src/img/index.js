@@ -29,6 +29,10 @@ import send from "./icons/send.png";
 import sendHover from "./icons/sendHover.png";
 import phone from "./icons/phone.svg";
 import email from "./icons/email.svg";
+import telegram from "./icons/telegram-white.png";
+import telegramHover from "./icons/telegram.png";
+import linkedin from "./icons/linkedin.png";
+import linkedinHover from "./icons/linkedin-black.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -108,4 +112,8 @@ export {
   phone,
   email,
   ukmap,
+  telegram,
+  telegramHover,
+  linkedin,
+  linkedinHover,
 };

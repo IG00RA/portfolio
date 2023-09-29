@@ -4,7 +4,15 @@ import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-import { send, sendHover } from "../img";
+import {
+  send,
+  sendHover,
+  telegram,
+  telegramHover,
+  linkedin,
+  linkedinHover,
+} from "../img";
+import Notiflix from "notiflix";
 
 const Contact = () => {
   const formRef = useRef();
@@ -21,29 +29,54 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
+  const validateEmail = (email) => {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
-    // sign up on emailjs.com (select the gmail service and connect your account).
-    //click on create a new template then click on save.
+    if (!validateEmail(form.email)) {
+      setLoading(false);
+      Notiflix.Notify.failure("Please enter a valid email address.");
+      return;
+    }
+
+    if (form.name.length < 3) {
+      setLoading(false);
+      Notiflix.Notify.failure("Name must be at least 3 characters long.");
+      return;
+    }
+
+    if (form.message.length < 10) {
+      setLoading(false);
+      Notiflix.Notify.failure("Message must be at least 10 characters long.");
+      return;
+    }
+
+    // Додайте email в текст повідомлення
+    const messageWithSenderEmail = `Email: ${form.email}\n\n${form.message}`;
+
     emailjs
       .send(
-        "serviceID", // paste your ServiceID here (you'll get one when your service is created).
-        "templateID", // paste your TemplateID here (you'll find it under email templates).
+        "service_5ctmt1q",
+        "template_88saxup",
         {
           from_name: form.name,
-          to_name: "YourName", // put your name here.
+          to_name: "Ihor Hromadskyi",
           from_email: form.email,
-          to_email: "youremail@gmail.com", //put your email here.
-          message: form.message,
+          to_email: "gromadskiyigor@gmail.com",
+          message: messageWithSenderEmail, // Включаємо email в текст повідомлення
         },
-        "yourpublickey" //paste your Public Key here. You'll get it in your profile section.
+        "VNBfcGvc_SXd_9Avk"
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          Notiflix.Notify.success(
+            "Thank you. Your message is already flying to me."
+          );
 
           setForm({
             name: "",
@@ -54,14 +87,14 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.log(error);
-          alert("Something went wrong. Please try again.");
+          Notiflix.Notify.failure("Something went wrong. Please try again.");
         }
       );
   };
 
   return (
     <div
-      className="-mt-[8rem] xl:flex-row flex-col-reverse 
+      className="-mt-[6rem] xl:flex-row flex-col-reverse 
       flex gap-10 overflow-hidden"
     >
       <motion.div
@@ -88,6 +121,7 @@ const Contact = () => {
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
               border-none font-medium"
+              required // Поле імені обов'язкове
             />
           </label>
           <label className="flex flex-col">
@@ -102,6 +136,7 @@ const Contact = () => {
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
               border-none font-medium"
+              required // Поле електронної пошти обов'язкове
             />
           </label>
           <label className="flex flex-col">
@@ -118,6 +153,7 @@ const Contact = () => {
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
               border-none font-medium resize-none"
+              required // Поле повідомлення обов'язкове
             />
           </label>
 
@@ -147,6 +183,30 @@ const Contact = () => {
               w-[23px] h-[23px] object-contain"
             />
           </button>
+          <a
+            href="https://your-telegram-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2"
+          >
+            <img
+              src={telegram}
+              alt="Telegram"
+              className="w-[20px] h-[20px] object-contain"
+            />
+          </a>
+          <a
+            href="https://your-linkedin-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2"
+          >
+            <img
+              src={linkedin}
+              alt="LinkedIn"
+              className="w-[20px] h-[20px] object-contain"
+            />
+          </a>
         </form>
       </motion.div>
     </div>
