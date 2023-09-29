@@ -2,6 +2,7 @@ import bwmap from "./backgrounds/urkaine.jpg";
 import nairobi from "./backgrounds/lviv.jpg";
 import whiteabstract from "./backgrounds/white-abstract.png";
 import worldmap from "./backgrounds/urkaine.jpg";
+import ukmap from "./backgrounds/urkaine-mob.jpg";
 
 import logo from "./logo/logo-black.webp";
 import logoText from "./logo/logo-text-black.webp";
@@ -106,4 +107,5 @@ export {
   technologi,
   phone,
   email,
+  ukmap,
 };
