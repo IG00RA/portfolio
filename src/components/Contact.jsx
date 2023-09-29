@@ -22,6 +22,8 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [telegramSrc, setTelegramSrc] = useState(telegram);
+  const [linkedinSrc, setLinkedinSrc] = useState(linkedin);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,6 +35,23 @@ const Contact = () => {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailPattern.test(email);
   };
+
+  const handleTelegramHover = () => {
+    setTelegramSrc(telegramHover);
+  };
+
+  const handleTelegramOut = () => {
+    setTelegramSrc(telegram);
+  };
+
+  const handleLinkedinHover = () => {
+    setLinkedinSrc(linkedinHover);
+  };
+
+  const handleLinkedinOut = () => {
+    setLinkedinSrc(linkedin);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -156,57 +175,77 @@ const Contact = () => {
               required // Поле повідомлення обов'язкове
             />
           </label>
-
-          <button
-            type="submit"
-            className="live-demo flex justify-center sm:gap-4 
-            gap-3 sm:text-[20px] text-[16px] text-timberWolf 
-            font-bold font-beckman items-center py-5
-            whitespace-nowrap sm:w-[130px] sm:h-[50px] 
-            w-[100px] h-[45px] rounded-[10px] bg-night 
-            hover:bg-battleGray hover:text-eerieBlack 
-            transition duration-[0.2s] ease-in-out"
-            onMouseOver={() => {
-              document
-                .querySelector(".contact-btn")
-                .setAttribute("src", sendHover);
-            }}
-            onMouseOut={() => {
-              document.querySelector(".contact-btn").setAttribute("src", send);
-            }}
-          >
-            {loading ? "Sending" : "Send"}
-            <img
-              src={send}
-              alt="send"
-              className="contact-btn sm:w-[26px] sm:h-[26px] 
-              w-[23px] h-[23px] object-contain"
-            />
-          </button>
-          <a
-            href="https://your-telegram-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-2"
-          >
-            <img
-              src={telegram}
-              alt="Telegram"
-              className="w-[20px] h-[20px] object-contain"
-            />
-          </a>
-          <a
-            href="https://your-linkedin-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-2"
-          >
-            <img
-              src={linkedin}
-              alt="LinkedIn"
-              className="w-[20px] h-[20px] object-contain"
-            />
-          </a>
+          <div className="flex justify-start items-center gap-5">
+            <button
+              type="submit"
+              className="live-demo flex justify-center sm:gap-4 
+              gap-3 sm:text-[20px] text-[16px] text-timberWolf 
+              font-bold font-beckman items-center py-5
+              whitespace-nowrap sm:w-[130px] sm:h-[50px] 
+              w-[100px] h-[45px] rounded-[10px] bg-night 
+              hover:bg-battleGray hover:text-eerieBlack 
+              transition duration-[0.2s] ease-in-out"
+              onMouseOver={() => {
+                document
+                  .querySelector(".contact-btn")
+                  .setAttribute("src", sendHover);
+              }}
+              onMouseOut={() => {
+                document
+                  .querySelector(".contact-btn")
+                  .setAttribute("src", send);
+              }}
+            >
+              {loading ? "Sending" : "Send"}
+              <img
+                src={send}
+                alt="send"
+                className="contact-btn sm:w-[26px] sm:h-[26px] 
+                w-[23px] h-[23px] object-contain transition duration-200"
+              />
+            </button>
+            <span>OR</span>
+            <a
+              href="https://t.me/igoora"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="live-demo flex justify-center sm:gap-4 
+              gap-3 sm:text-[20px] text-[16px] text-timberWolf 
+              font-bold font-beckman items-center py-5
+              whitespace-nowrap sm:w-[50px] sm:h-[50px] 
+              w-[45px] h-[45px] rounded-[10px] bg-night 
+              hover:bg-battleGray hover:text-eerieBlack 
+              transition duration-[0.2s] ease-in-out ml-2"
+              onMouseOver={handleTelegramHover}
+              onMouseOut={handleTelegramOut}
+            >
+              <img
+                src={telegramSrc}
+                alt="Telegram"
+                className="w-[30px] h-[30px] object-contain transition duration-200"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/igoora/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="live-demo flex justify-center sm:gap-4 
+              gap-3 sm:text-[20px] text-[16px] text-timberWolf 
+              font-bold font-beckman items-center py-5
+              whitespace-nowrap sm:w-[50px] sm:h-[50px] 
+              w-[45px] h-[45px] rounded-[10px] bg-night 
+              hover:bg-battleGray hover:text-eerieBlack 
+              transition duration-[0.2s] ease-in-out ml-2"
+              onMouseOver={handleLinkedinHover}
+              onMouseOut={handleLinkedinOut}
+            >
+              <img
+                src={linkedinSrc}
+                alt="LinkedIn"
+                className="w-[35px] h-[35px] object-contain transition duration-200"
+              />
+            </a>
+          </div>
         </form>
       </motion.div>
     </div>
