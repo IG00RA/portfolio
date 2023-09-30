@@ -140,7 +140,7 @@ const Contact = () => {
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
               border-none font-medium"
-              required // Поле імені обов'язкове
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -155,7 +155,7 @@ const Contact = () => {
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
               border-none font-medium"
-              required // Поле електронної пошти обов'язкове
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -172,10 +172,10 @@ const Contact = () => {
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
               border-none font-medium resize-none"
-              required // Поле повідомлення обов'язкове
+              required
             />
           </label>
-          <div className="flex justify-start items-center gap-5">
+          <div className="flex justify-start items-center gap-1 lxs:gap-3 xs:gap-5">
             <button
               type="submit"
               className="live-demo flex justify-center sm:gap-4 
@@ -209,13 +209,9 @@ const Contact = () => {
               href="https://t.me/igoora"
               target="_blank"
               rel="noopener noreferrer"
-              className="live-demo flex justify-center sm:gap-4 
-              gap-3 sm:text-[20px] text-[16px] text-timberWolf 
-              font-bold font-beckman items-center py-5
-              whitespace-nowrap sm:w-[50px] sm:h-[50px] 
-              w-[45px] h-[45px] rounded-[10px] bg-night 
+              className="flex justify-center w-[50px] h-[50px] rounded-[10px] items-center bg-night 
               hover:bg-battleGray hover:text-eerieBlack 
-              transition duration-[0.2s] ease-in-out ml-2"
+              transition duration-[0.2s] ease-in-out"
               onMouseOver={handleTelegramHover}
               onMouseOut={handleTelegramOut}
             >
@@ -229,13 +225,9 @@ const Contact = () => {
               href="https://www.linkedin.com/in/igoora/"
               target="_blank"
               rel="noopener noreferrer"
-              className="live-demo flex justify-center sm:gap-4 
-              gap-3 sm:text-[20px] text-[16px] text-timberWolf 
-              font-bold font-beckman items-center py-5
-              whitespace-nowrap sm:w-[50px] sm:h-[50px] 
-              w-[45px] h-[45px] rounded-[10px] bg-night 
+              className="flex justify-center w-[50px] h-[50px] rounded-[10px] items-center bg-night 
               hover:bg-battleGray hover:text-eerieBlack 
-              transition duration-[0.2s] ease-in-out ml-2"
+              transition duration-[0.2s] ease-in-out"
               onMouseOver={handleLinkedinHover}
               onMouseOut={handleLinkedinOut}
             >
