@@ -2,22 +2,6 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 const Particle = () => {
-  //   useEffect(() => {
-  //     const particleContainer = document.getElementById("section-particles");
-  //     console.log(particleContainer);
-  //     if (particleContainer) {
-  //       const canvasElement = particleContainer.querySelector("canvas");
-  //       console.log(canvasElement);
-  //       if (canvasElement) {
-  //         // Видаліть атрибут "style" з canvas, що встановлює "position: fixed"
-  //         canvasElement.removeAttribute("style");
-
-  //         // Встановіть потрібну позицію, наприклад, "position: absolute"
-  //         canvasElement.style.position = "absolute";
-  //       }
-  //     }
-  //   }, []); // [] означає, що цей ефект запуститься тільки при монтажі компонента
-
   const particlesInit = async (main) => {
     await loadFull(main);
   };
@@ -26,8 +10,6 @@ const Particle = () => {
   return (
     <>
       <Particles
-        // id="section-particles"
-        // className="my-particles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
@@ -145,5 +127,4 @@ const Particle = () => {
     </>
   );
 };
-
 export default Particle;

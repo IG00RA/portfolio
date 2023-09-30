@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { igoora, bwmap, ukmap } from "../../img";
-import Particle from "../Particle";
 import {
   HeroTextWrap,
   PersonalImg,
@@ -10,6 +9,7 @@ import {
   StyledHeroSection,
   StyledHeroText,
 } from "./Hero.styled";
+import ParticleWrap from "../Particle";
 
 const Hero = () => {
   return (
@@ -33,7 +33,7 @@ const Hero = () => {
         className="relative flex sm:flex-row flex-col w-full h-screen mx-auto 
  overflow-hidden"
       >
-        <Particle />
+        <ParticleWrap />
         <HeroTextWrap>
           <div className="flex flex-col justify-center items-center mt-5">
             <div className="w-5 h-5 rounded-full bg-[#0a0a0a] sm:hidden" />
