@@ -9,7 +9,7 @@ import {
   StyledHeroSection,
   StyledHeroText,
 } from "./Hero.styled";
-import ParticleWrap from "../Particle";
+import ParticleWrap from "../ParticleWrap";
 
 const Hero = () => {
   return (

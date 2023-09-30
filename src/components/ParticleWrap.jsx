@@ -7,9 +7,9 @@ const ParticleWrap = () => {
   useEffect(() => {
     const supportsTouch =
       "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
     setHasTouchScreen(supportsTouch);
   }, []);
-
   if (!hasTouchScreen) {
     return <Particle />;
   }
