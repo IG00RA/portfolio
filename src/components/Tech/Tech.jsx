@@ -6,7 +6,7 @@ import { styles } from "../../styles";
 import { textVariant } from "../../utils/motion";
 import { StyledBallCanvas } from "./Tech.styled";
 
-const Tech = () => {
+export const Tech = () => {
   return (
     <>
       <motion.div variants={textVariant()}>

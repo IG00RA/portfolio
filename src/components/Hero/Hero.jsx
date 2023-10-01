@@ -16,24 +16,22 @@ const Hero = () => {
     <>
       <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
         <img
+          loading="lazy"
           src={bwmap}
           alt="world map"
-          className="w-full h-full sm:block hidden object-cover"
+          className="w-full h-full object-cover hidden sm:block"
         />
-      </div>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
         <img
+          loading="lazy"
           src={ukmap}
           alt="world map"
-          className="w-full h-full sm:hidden block object-cover"
+          className="w-full h-full object-cover sm:hidden"
         />
       </div>
 
-      <StyledHeroSection
-        className="relative flex sm:flex-row flex-col w-full h-screen mx-auto 
- overflow-hidden"
-      >
+      <StyledHeroSection className="relative flex sm:flex-row flex-col w-full h-screen mx-auto overflow-hidden">
         <ParticleWrap />
+
         <HeroTextWrap>
           <div className="flex flex-col justify-center items-center mt-5">
             <div className="w-5 h-5 rounded-full bg-[#0a0a0a] sm:hidden" />
@@ -45,10 +43,7 @@ const Hero = () => {
               className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}
             >
               Hi, I&apos;m <br className="sm:block hidden" />
-              <span
-                className="sm:text-battleGray text-eerieBlack font-mova
-                font-extrabold uppercase"
-              >
+              <span className="sm:text-battleGray text-eerieBlack font-mova font-extrabold uppercase">
                 Ihor Hromadskiy
               </span>
             </StyledHeader>
@@ -62,23 +57,11 @@ const Hero = () => {
               accomplishments.
             </StyledHeroText>
           </div>
-          <div
-            className="w-screen flex flex-col items-start 
-            justify-center sm:-ml-[3rem] xxs:mt-4"
-          ></div>
-
-          <div></div>
         </HeroTextWrap>
-        <ScrollWrap
-          className="absolute w-full 
-          flex justify-center items-center"
-        >
+
+        <ScrollWrap className="absolute w-full flex justify-center items-center">
           <a href="#about">
-            <div
-              className="w-[35px] h-[64px] rounded-3xl border-4 
-            border-french border-dim flex
-            justify-center items-start p-2"
-            >
+            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-french border-dim flex justify-center items-start p-2">
               <motion.div
                 animate={{
                   y: [0, 24, 0],
@@ -93,13 +76,10 @@ const Hero = () => {
             </div>
           </a>
         </ScrollWrap>
+
         <div>
           <PersonalImg src={igoora} alt="Ihor Hromadskyi" />
         </div>
-        <div
-          style={{ position: "relative" }}
-          className="absolute top-0 left-0 z-0 w-full h-[100vh]"
-        ></div>
       </StyledHeroSection>
     </>
   );

@@ -25,6 +25,7 @@ import {
   StyledSocialLink,
   StyledUl,
 } from "./Navbar.styled";
+import PropTypes from "prop-types";
 
 const Navbar = ({ toggle, setToggle }) => {
   const [active, setActive] = useState("");
@@ -137,6 +138,11 @@ const Navbar = ({ toggle, setToggle }) => {
       </NavWrapper>
     </StyledDesktopNav>
   );
+};
+
+Navbar.propTypes = {
+  toggle: PropTypes.bool.isRequired,
+  setToggle: PropTypes.func.isRequired,
 };
 
 export default Navbar;

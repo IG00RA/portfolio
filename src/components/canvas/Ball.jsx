@@ -1,4 +1,6 @@
-import { Suspense } from "react";
+import * as THREE from "three";
+import PropTypes from "prop-types";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -8,15 +10,16 @@ import {
   useTexture,
 } from "@react-three/drei";
 import Loader from "../Loader";
+/* eslint-disable */
 
-const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
+const Ball = ({ imgUrl }) => {
+  const [decal] = useTexture([imgUrl]);
 
   return (
     <Float speed={2.5} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+      <ambientLight />
+      <directionalLight position={[0, 0, 0.05]} intensity={0.25} />
+      <mesh castShadow receiveShadow scale={[2.75, 2.75, 2.75]}>
         <icosahedronGeometry args={[1, 2]} />
         <meshStandardMaterial
           color="#3d3d3d"
@@ -35,17 +38,31 @@ const Ball = (props) => {
   );
 };
 
+Ball.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+};
+
 const BallCanvas = ({ icon }) => {
+  const [decalLoaded, setDecalLoaded] = useState(false);
+
+  useEffect(() => {
+    const textureLoader = new THREE.TextureLoader();
+    textureLoader.load(icon, () => {
+      setDecalLoaded(true);
+    });
+  }, [icon]);
+
   return (
     <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
+      <OrbitControls enableZoom={false} position0={0} />
       <Suspense fallback={<Loader />}>
-        <OrbitControls enableZoom={false} position0={0} />
-        <Ball imgUrl={icon} />
+        {decalLoaded && <Ball imgUrl={icon} />}
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
 };
-
+BallCanvas.propTypes = {
+  icon: PropTypes.string.isRequired, // icon повинно бути рядком та обов'язковим пропом
+};
 export default BallCanvas;

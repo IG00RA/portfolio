@@ -1,9 +1,7 @@
 import { useState, useRef } from "react";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
 import {
   send,
   sendHover,
@@ -14,7 +12,7 @@ import {
 } from "../img";
 import Notiflix from "notiflix";
 
-const Contact = () => {
+export const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -74,7 +72,6 @@ const Contact = () => {
       return;
     }
 
-    // Додайте email в текст повідомлення
     const messageWithSenderEmail = `Email: ${form.email}\n\n${form.message}`;
 
     emailjs
@@ -86,7 +83,7 @@ const Contact = () => {
           to_name: "Ihor Hromadskyi",
           from_email: form.email,
           to_email: "gromadskiyigor@gmail.com",
-          message: messageWithSenderEmail, // Включаємо email в текст повідомлення
+          message: messageWithSenderEmail,
         },
         "VNBfcGvc_SXd_9Avk"
       )
@@ -113,13 +110,10 @@ const Contact = () => {
 
   return (
     <div
-      className="-mt-[6rem] xl:flex-row flex-col-reverse 
-      flex gap-10 overflow-hidden"
+      className="-mt-[1rem] xl:flex-row flex-col-reverse 
+      flex gap-10 overflow-hidden "
     >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-jet p-8 rounded-2xl"
-      >
+      <div className="flex-[0.75] bg-jet p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadTextLight}>Contact</h3>
 
@@ -239,7 +233,7 @@ const Contact = () => {
             </a>
           </div>
         </form>
-      </motion.div>
+      </div>
     </div>
   );
 };

@@ -6,26 +6,32 @@ import {
 } from "./ScrollTop.styled";
 
 export default function ScrollTop() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-  const [circleProgress, setCircleProgress] = useState(0);
+  const [scrollInfo, setScrollInfo] = useState({
+    isVisible: false,
+    scrollY: 0,
+    circleProgress: 0,
+  });
+
+  const handleScroll = () => {
+    const newScrollY = window.scrollY;
+    const maxScroll =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (newScrollY / maxScroll) * 100;
+
+    setScrollInfo({
+      isVisible: newScrollY > 300,
+      scrollY: newScrollY,
+      circleProgress: progress,
+    });
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-      // Обчислюємо прогрес за годинниковою стрілкою в залежності від положення прокрутки
-      const maxScroll =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollY / maxScroll) * 100;
-      setCircleProgress(progress);
-    };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollY]);
+  }, [scrollInfo]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -34,13 +40,7 @@ export default function ScrollTop() {
     });
   };
 
-  useEffect(() => {
-    if (scrollY > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  }, [scrollY]);
+  const { isVisible, circleProgress } = scrollInfo;
 
   return (
     <>
