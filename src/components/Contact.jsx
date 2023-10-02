@@ -2,14 +2,7 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import {
-  send,
-  sendHover,
-  telegram,
-  telegramHover,
-  linkedin,
-  linkedinHover,
-} from "../img";
+import { send, sendHover, telegram, linkedin } from "../img";
 import Notiflix from "notiflix";
 
 export const Contact = () => {
@@ -20,8 +13,6 @@ export const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  const [telegramSrc, setTelegramSrc] = useState(telegram);
-  const [linkedinSrc, setLinkedinSrc] = useState(linkedin);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,22 +23,6 @@ export const Contact = () => {
   const validateEmail = (email) => {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailPattern.test(email);
-  };
-
-  const handleTelegramHover = () => {
-    setTelegramSrc(telegramHover);
-  };
-
-  const handleTelegramOut = () => {
-    setTelegramSrc(telegram);
-  };
-
-  const handleLinkedinHover = () => {
-    setLinkedinSrc(linkedinHover);
-  };
-
-  const handleLinkedinOut = () => {
-    setLinkedinSrc(linkedin);
   };
 
   const handleSubmit = (e) => {
@@ -206,11 +181,9 @@ export const Contact = () => {
               className="flex justify-center w-[50px] h-[50px] rounded-[10px] items-center bg-night 
               hover:bg-battleGray hover:text-eerieBlack 
               transition duration-[0.2s] ease-in-out"
-              onMouseOver={handleTelegramHover}
-              onMouseOut={handleTelegramOut}
             >
               <img
-                src={telegramSrc}
+                src={telegram}
                 alt="Telegram"
                 className="w-[30px] h-[30px] object-contain transition duration-200"
               />
@@ -222,11 +195,9 @@ export const Contact = () => {
               className="flex justify-center w-[50px] h-[50px] rounded-[10px] items-center bg-night 
               hover:bg-battleGray hover:text-eerieBlack 
               transition duration-[0.2s] ease-in-out"
-              onMouseOver={handleLinkedinHover}
-              onMouseOut={handleLinkedinOut}
             >
               <img
-                src={linkedinSrc}
+                src={linkedin}
                 alt="LinkedIn"
                 className="w-[35px] h-[35px] object-contain transition duration-200"
               />

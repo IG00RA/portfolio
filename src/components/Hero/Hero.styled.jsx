@@ -94,5 +94,5 @@ export const HeroTextWrap = styled.div`
   }
 `;
 export const StyledHeroText = styled.div`
-  width: 80%;
+  width: 75%;
 `;
