@@ -20,8 +20,6 @@ export const StyledHeader = styled.h1`
   }
 `;
 
-export const StyledHeroText = styled.p``;
-
 export const StyledHeroSection = styled.section`
   background-image: linear-gradient(
     127deg,
@@ -94,4 +92,7 @@ export const HeroTextWrap = styled.div`
   @media (min-width: 1280px) {
     top: 250px;
   }
+`;
+export const StyledHeroText = styled.div`
+  width: 80%;
 `;

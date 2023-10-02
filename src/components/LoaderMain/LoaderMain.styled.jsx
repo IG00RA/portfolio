@@ -13,17 +13,17 @@ const bounce = keyframes`
 `;
 
 export const LoaderContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffffa8;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 1;
+  display: grid;
+  place-items: center;
 `;
 
 export const LoaderImage = styled.img`

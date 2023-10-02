@@ -47,14 +47,12 @@ const Hero = () => {
                 Ihor Hromadskiy
               </span>
             </StyledHeader>
-            <StyledHeroText className={`${styles.heroSubText} text-eerieBlack`}>
-              Passionate FullStack developer <br className="sm:hidden block" />
-              dedicated to crafting elegant
-              <br className="sm:hidden block" /> and functional applications.
-              <br className="md:hidden block" />
-              Let&apos;s connect and discuss
-              <br className="sm:hidden block" /> more about my skills and
-              accomplishments.
+            <StyledHeroText>
+              <p className={`${styles.heroSubText} text-eerieBlack`}>
+                Passionate FullStack developer dedicated to crafting elegant and
+                functional applications. Let&apos;s connect and discuss more
+                about my skills and accomplishments.
+              </p>
             </StyledHeroText>
           </div>
         </HeroTextWrap>
