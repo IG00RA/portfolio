@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { github, pineapple, pineappleHover } from "../img";
-import { fadeIn } from "../utils/motion";
 import { motion } from "framer-motion";
 
 export const ProjectCard = ({
@@ -10,23 +9,26 @@ export const ProjectCard = ({
   image,
   repo,
   demo,
-  index,
   active,
   handleClick,
 }) => {
   const btnIcon = document.querySelector(".btn-icon");
   return (
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      initial={{ x: -100 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 1.5 }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
       className={`relative ${
-        active === id ? "lg:flex-[3.5] flex-[10]" : "lg:flex-[0.5] flex-[2]"
+        active === id ? "md:flex-[3.5] flex-[10]" : "md:flex-[0.5] flex-[2]"
       } flex items-center justify-center min-w-[220px] 
-      h-[420px] cursor-pointer card-shadow`}
+      h-[420px] cursor-pointer card-shadow bg-jetLight opacity-[0.3] hover:opacity-[0.8] `}
       onClick={() => handleClick(id)}
     >
       <div
-        className="absolute top-0 left-0 z-10 bg-jetLight 
-      h-full w-full opacity-[0.8] rounded-[24px]"
+        className="absolute top-0 left-0 z-10 
+      h-full w-full rounded-[24px]"
       ></div>
 
       <img
@@ -37,12 +39,15 @@ export const ProjectCard = ({
       />
 
       {active !== id ? (
-        <div className="flex items-center justify-start pr-[6.5rem]">
+        <div
+          className="absolute flex right-0 p-4 md:p-8 justify-start w-full lxs:w-60 xs:w-80 md:w-20 
+            flex-col bg-[rgba(122,122,122,0.75)] z-20 h-full rounded-tl-[24px] rounded-bl-[24px] lxs:rounded-tl-[0px] lxs:rounded-bl-[0px] rounded-tr-[24px] rounded-br-[24px]"
+        >
           <h3
             className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
         whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
-        absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
-        leading-none z-20 transition duration-[0.3s] ease-in-out transform hover:scale-110"
+        absolute z-0 md:bottom-[7rem] md:rotate-[-90deg] md:origin-[0,0]
+        leading-none z-20 transition duration-[0.3s] ease-in-out transform hover:scale-110 right-15 md:right-[-60px]"
           >
             {name}
           </h3>
@@ -122,7 +127,6 @@ ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
   repo: PropTypes.string.isRequired,
   demo: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
   active: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
 };

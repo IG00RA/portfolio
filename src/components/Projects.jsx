@@ -37,11 +37,10 @@ export const Projects = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <div className="mt-[50px] flex lg:flex-row flex-wrap flex-col min-h-[110vh] gap-7">
-          {projects.map((project, index) => (
+        <div className="mt-[50px] flex md:flex-row flex-wrap flex-col min-h-[135vh] md:min-h-[1vh] gap-7">
+          {projects.map((project) => (
             <ProjectCard
               key={project.id}
-              index={index}
               {...project}
               active={active}
               handleClick={setActive}
