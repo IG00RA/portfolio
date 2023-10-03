@@ -55,5 +55,30 @@
         "phoneBook": "A simple phonebook with Swagger API"
       }
     }
+  },
+  "experience": {
+    "tittle": {
+      "web": "My skills",
+      "java": "My skills",
+      "react": "My skills",
+      "node": "My skills",
+      "team": "My skills",
+      "full": "My skills"
+    },
+    "company": { "goit": "Technologies" },
+    "month": {
+      "january": "Jan",
+      "february": "Feb",
+      "march": "Mar",
+      "april": "Apr",
+      "may": "May",
+      "june": "Jun",
+      "july": "Jul",
+      "august": "Aug",
+      "september": "Sep",
+      "october": "Oct",
+      "november": "Nov",
+      "december": "Dec"
+    }
   }
 }
