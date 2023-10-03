@@ -280,7 +280,7 @@ export const NavWrap = styled.div`
   padding: 2rem;
   background-color: rgba(244, 244, 246, 0.99); /* Змініть кольори на ваш смак */
 
-  opacity: 0; /* Початкова прозорість */
+  opacity: 0;
   animation: ${(props) =>
     props.isopen
       ? css`
