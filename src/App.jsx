@@ -14,6 +14,13 @@ import LoaderMain from "./components/LoaderMain/LoaderMain";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
+  if (toggle) {
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+  } else {
+    document.documentElement.style.overflow = "auto";
+    document.body.style.overflow = "auto";
+  }
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
