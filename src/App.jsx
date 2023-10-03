@@ -16,15 +16,9 @@ const App = () => {
   const [toggle, setToggle] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    const handleLoad = () => {
-      console.log("DOMContentLoaded event fired");
+    setTimeout(() => {
       setIsLoading(false);
-    };
-    window.onload = handleLoad;
-
-    return () => {
-      window.onload = null;
-    };
+    }, 1200);
   }, []);
 
   return (
