@@ -1,13 +1,59 @@
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
-import { services } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
 import { StyledMotionDiv } from "./About.styled";
 import { useEffect, useState, useMemo } from "react";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
+import {
+  frontend,
+  backend,
+  ux,
+  prototyping,
+  spirit,
+  technology,
+  userDesign,
+  crossPlatform,
+} from "../../img";
 
 export const About = () => {
+  const { t } = useTranslation();
+  const services = [
+    {
+      title: t("about.services.frontend"),
+      icon: frontend,
+    },
+    {
+      title: t("about.services.backend"),
+      icon: backend,
+    },
+    {
+      title: t("about.services.ux"),
+      icon: ux,
+    },
+    {
+      title: t("about.services.prototyping"),
+      icon: prototyping,
+    },
+    {
+      title: t("about.services.spirit"),
+      icon: spirit,
+    },
+    {
+      title: t("about.services.technology"),
+      icon: technology,
+    },
+    {
+      title: t("about.services.userDesign"),
+      icon: userDesign,
+    },
+    {
+      title: t("about.services.crossPlatform"),
+      icon: crossPlatform,
+    },
+  ];
+
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -81,19 +127,15 @@ export const About = () => {
   return (
     <div>
       <motion.div {...motionTitleProps}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <p className={styles.sectionSubText}>{t("about.par")}</p>
+        <h2 className={styles.sectionHeadText}>{t("about.header")}</h2>
       </motion.div>
 
       <motion.p
         {...motionTextProps}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
       >
-        Welcome to my Full Stack Developer Portfolio! I&apos;m passionate about
-        crafting innovative and functional solutions that bring ideas to life.
-        With a strong foundation in both front-end and back-end development, I
-        thrive in building seamless web applications that make a meaningful
-        impact.
+        {t("about.text")}
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

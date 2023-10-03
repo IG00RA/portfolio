@@ -8,5 +8,52 @@
     "me": "Hi, I'm",
     "IH": "Ihor Hromadskiy",
     "text": "Passionate FullStack developer dedicated to crafting elegant and functional applications. Let's connect and discuss more about my skills and accomplishments."
+  },
+  "about": {
+    "par": "Introduction",
+    "header": "Overview",
+    "text": "Welcome to my Full Stack Developer Portfolio! I'm passionate about crafting innovative and functional solutions that bring ideas to life. With a strong foundation in both front-end and back-end development, I thrive in building seamless web applications that make a meaningful impact.",
+    "services": {
+      "frontend": "Frontend Developer",
+      "backend": "Backend Developer",
+      "ux": "Attention to Detail",
+      "prototyping": "Problem Solver",
+      "spirit": "Collaborative Spirit",
+      "technology": "Cutting-Edge Technologies",
+      "userDesign": "User-Centered Design",
+      "crossPlatform": "Cross-Platform Compatibility"
+    }
+  },
+  "tech": {
+    "par": "My skills",
+    "header": "Technologies"
+  },
+  "projects": {
+    "par": "Case Studies",
+    "header": "Projects",
+    "text": "These projects demonstrate my expertise with practical examples of some of my work, including brief descriptions and links to code repositories and live demos. They showcase my ability to tackle intricate challenges, adapt to various technologies, and efficiently oversee projects.",
+    "button": "LIVE DEMO",
+    "sites": {
+      "name": {
+        "filmoteka": "Filmoteka",
+        "taskManager": "Task manager",
+        "mimino": "Mimino",
+        "carRent": "Car rent portal",
+        "imageFinder": "Fast image finder",
+        "web": "Web studio",
+        "movieFinder": "Movie finder site",
+        "phoneBook": "Phone Book"
+      },
+      "description": {
+        "filmoteka": "Discover, explore, and enjoy the world of cinema with Filmoteka!",
+        "taskManager": "The GooseTrack application is a powerful tool for task planning.",
+        "mimino": "Restaurant-hotel complex",
+        "carRent": "DriveStar Car Rental. your premier destination for luxury car rentals.",
+        "imageFinder": "This is a demo website for a image finder portal.",
+        "web": "Web studio site - effective solutions for your business",
+        "movieFinder": "Demo site - movie search",
+        "phoneBook": "A simple phonebook with Swagger API"
+      }
+    }
   }
 }

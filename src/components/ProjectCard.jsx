@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { github, pineapple, pineappleHover } from "../img";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export const ProjectCard = ({
   id,
@@ -13,6 +14,7 @@ export const ProjectCard = ({
   handleClick,
 }) => {
   const btnIcon = document.querySelector(".btn-icon");
+  const { t } = useTranslation();
   return (
     <motion.div
       initial={{ x: -100 }}
@@ -114,7 +116,7 @@ export const ProjectCard = ({
                 className="btn-icon sm:w-[34px] sm:h-[34px] 
                   w-[30px] h-[30px] object-contain"
               />
-              LIVE DEMO
+              {t("projects.button")}
             </button>
           </div>
         </>

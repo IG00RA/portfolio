@@ -12,7 +12,7 @@ import loaderMain from "./personal/loader.webp";
 
 import crossPlatform from "./icons/cross-platform.webp";
 import userDesign from "./icons/user-experience.webp";
-import technologi from "./icons/project-management.webp";
+import technology from "./icons/project-management.webp";
 import spirit from "./icons/team-spirit.webp";
 import backend from "./icons/backend.webp";
 import ux from "./icons/ux.webp";
@@ -109,7 +109,7 @@ export {
   tailwind,
   typescript,
   spirit,
-  technologi,
+  technology,
   phone,
   email,
   ukmap,
