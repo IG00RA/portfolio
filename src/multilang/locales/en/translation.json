@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "me": "Hi, I'm",
+    "IH": "Ihor Hromadskiy",
+    "text": "Passionate FullStack developer dedicated to crafting elegant and functional applications. Let's connect and discuss more about my skills and accomplishments."
+  }
+}

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { styles } from "../../styles";
-import { navLinks } from "../../constants";
 import { close, menu, logo, logoText, email, phone } from "../../img";
 import {
   ContactItem,
@@ -26,13 +25,30 @@ import {
   StyledUl,
 } from "./Navbar.styled";
 import PropTypes from "prop-types";
+import { LanguageToggler } from "../LanguageToggler/LanguageToggler";
+import { useTranslation } from "react-i18next";
 
 const Navbar = ({ toggle, setToggle }) => {
   const [active, setActive] = useState("");
-
+  const { t } = useTranslation();
+  const navLinks = [
+    {
+      id: "about",
+      title: t("nav.about"),
+    },
+    {
+      id: "projects",
+      title: t("nav.projects"),
+    },
+    {
+      id: "contact",
+      title: t("nav.contact"),
+    },
+  ];
   return (
     <StyledDesktopNav className={`${styles.paddingX}`}>
       <NavWrapper>
+        <LanguageToggler />
         <StyledLink
           to="/"
           onClick={() => {

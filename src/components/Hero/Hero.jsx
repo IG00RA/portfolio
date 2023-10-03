@@ -10,8 +10,11 @@ import {
   StyledHeroText,
 } from "./Hero.styled";
 import ParticleWrap from "../ParticleWrap";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
@@ -42,16 +45,14 @@ const Hero = () => {
             <StyledHeader
               className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}
             >
-              Hi, I&apos;m <br className="sm:block hidden" />
+              {t("hero.me")} <br className="sm:block hidden" />
               <span className="sm:text-battleGray text-eerieBlack font-mova font-extrabold uppercase">
-                Ihor Hromadskiy
+                {t("hero.IH")}
               </span>
             </StyledHeader>
             <StyledHeroText>
               <p className={`${styles.heroSubText} text-eerieBlack`}>
-                Passionate FullStack developer dedicated to crafting elegant and
-                functional applications. Let&apos;s connect and discuss more
-                about my skills and accomplishments.
+                {t("hero.text")}.
               </p>
             </StyledHeroText>
           </div>

@@ -7,13 +7,10 @@ import {
   javascript,
   typescript,
   html,
-  css,
   reactjs,
   redux,
-  tailwind,
   nodejs,
   git,
-  figma,
   docker,
   webStudio,
   phoneBook,
@@ -28,21 +25,6 @@ import {
   userDesign,
   crossPlatform,
 } from "../img";
-
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "projects",
-    title: "Projects",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-];
 
 const services = [
   {
