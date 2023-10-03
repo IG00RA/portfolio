@@ -21,7 +21,9 @@ export const ProjectCard = ({
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       className={`relative ${
-        active === id ? "md:flex-[3.5] flex-[10]" : "md:flex-[0.5] flex-[2]"
+        active === id
+          ? "md:flex-[3.5] flex-[10]  opacity-[0.8]"
+          : "md:flex-[0.5] flex-[2]"
       } flex items-center justify-center min-w-[220px] 
       h-[420px] cursor-pointer card-shadow bg-jetLight opacity-[0.3] hover:opacity-[0.8] focus:opacity-[0.8] `}
       onClick={() => handleClick(id)}
@@ -47,7 +49,7 @@ export const ProjectCard = ({
             className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
         whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
         absolute z-0 md:bottom-[7rem] md:rotate-[-90deg] md:origin-[0,0]
-        leading-none z-20 transition duration-[0.3s] ease-in-out transform hover:scale-110 right-15 md:right-[-60px]"
+        leading-none z-20 transition duration-[0.3s] ease-in-out transform hover:scale-110 right-15 md:right-[-60px] text-white"
           >
             {name}
           </h3>
@@ -77,7 +79,7 @@ export const ProjectCard = ({
 
             <h2
               className="font-bold sm:text-[32px] text-[24px] 
-              text-timberWolf uppercase font-beckman sm:mt-0 -mt-[1rem]"
+              text-timberWolf uppercase font-beckman sm:mt-0 -mt-[1rem] text-white"
             >
               {name}
             </h2>
