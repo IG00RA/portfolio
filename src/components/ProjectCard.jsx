@@ -23,7 +23,7 @@ export const ProjectCard = ({
       className={`relative ${
         active === id ? "md:flex-[3.5] flex-[10]" : "md:flex-[0.5] flex-[2]"
       } flex items-center justify-center min-w-[220px] 
-      h-[420px] cursor-pointer card-shadow bg-jetLight opacity-[0.3] hover:opacity-[0.8] `}
+      h-[420px] cursor-pointer card-shadow bg-jetLight opacity-[0.3] hover:opacity-[0.8] focus:opacity-[0.8] `}
       onClick={() => handleClick(id)}
     >
       <div
