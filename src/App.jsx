@@ -15,14 +15,15 @@ import LoaderMain from "./components/LoaderMain/LoaderMain";
 const App = () => {
   const [toggle, setToggle] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
-    window.addEventListener("load", () => {
+    const handleLoad = () => {
+      console.log("DOMContentLoaded event fired");
       setIsLoading(false);
-    });
+    };
+    window.onload = handleLoad;
 
     return () => {
-      window.removeEventListener("load", () => {});
+      window.onload = null;
     };
   }, []);
 
