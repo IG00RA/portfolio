@@ -70,7 +70,7 @@ export const About = () => {
 
   const maxItemsToShow = useMemo(() => {
     return windowWidth < 450 ? 4 : services.length;
-  }, [windowWidth]);
+  }, [services.length, windowWidth]);
 
   const ServiceCard = ({ index, title, icon }) => {
     const motionDivProps = useMemo(() => {

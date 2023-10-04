@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { styles } from "../../styles";
 import { close, menu, logo, logoText, email, phone } from "../../img";
 import {
   ContactItem,
