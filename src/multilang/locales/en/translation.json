@@ -57,15 +57,18 @@
     }
   },
   "experience": {
+    "par": "What I've done so far",
+    "header": "Experience",
+    "resume": "MY RESUME",
     "tittle": {
-      "web": "My skills",
-      "java": "My skills",
-      "react": "My skills",
-      "node": "My skills",
-      "team": "My skills",
-      "full": "My skills"
+      "web": "Web Developer",
+      "java": "JavaScript Developer",
+      "react": "ReactJS Developer",
+      "node": "NodeJS Developer",
+      "team": "Team Leader",
+      "full": "Full Stack Developer"
     },
-    "company": { "goit": "Technologies" },
+    "company": { "goit": "GoIT" },
     "month": {
       "january": "Jan",
       "february": "Feb",
@@ -80,5 +83,20 @@
       "november": "Nov",
       "december": "Dec"
     }
+  },
+  "contact": {
+    "par": "Get in touch",
+    "header": "Contact",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "namePlaceholder": "What's your name?",
+      "emailPlaceholder": "What's your email?",
+      "messagePlaceholder": "What's your message?",
+      "btnSending": "Sending",
+      "btnSend": "Send"
+    },
+    "or": "OR"
   }
 }

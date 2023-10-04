@@ -55,5 +55,48 @@
         "phoneBook": "Проста телефонна книга з Swagger API"
       }
     }
+  },
+  "experience": {
+    "par": "Ось що я наразі розробив:",
+    "header": "Досвід",
+    "resume": "РЕЗЮМЕ",
+    "tittle": {
+      "web": "Web розробник",
+      "java": "JavaScript розробник",
+      "react": "ReactJS розробник",
+      "node": "NodeJS розробник",
+      "team": "Лідер команди",
+      "full": "Full Stack розробник"
+    },
+    "company": { "goit": "GoIT" },
+    "month": {
+      "january": "Січ",
+      "february": "Лют",
+      "march": "Бер",
+      "april": "Кві",
+      "may": "Тра",
+      "june": "Чер",
+      "july": "Лип",
+      "august": "Сер",
+      "september": "Вер",
+      "october": "Жов",
+      "november": "Лис",
+      "december": "Гру"
+    }
+  },
+  "contact": {
+    "par": "Зв'язок зі мною",
+    "header": "Контакти",
+    "form": {
+      "name": "Ім'я",
+      "email": "Електронна пошта",
+      "message": "Повідомлення",
+      "namePlaceholder": "Як вас звати?",
+      "emailPlaceholder": "Яка ваша електронна пошта?",
+      "messagePlaceholder": "Введіть ваше повідомлення",
+      "btnSending": "Надсилання",
+      "btnSend": "Відправити"
+    },
+    "or": "Або"
   }
 }

@@ -4,8 +4,10 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { send, sendHover, telegram, linkedin } from "../img";
 import Notiflix from "notiflix";
+import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
+  const { t } = useTranslation();
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -89,8 +91,8 @@ export const Contact = () => {
       flex gap-10 overflow-hidden "
     >
       <div className="flex-[0.75] bg-jet p-8 rounded-2xl">
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadTextLight}>Contact</h3>
+        <p className={styles.sectionSubText}>{t("contact.par")}</p>
+        <h3 className={styles.sectionHeadTextLight}>{t("contact.header")}</h3>
 
         <form
           ref={formRef}
@@ -98,28 +100,15 @@ export const Contact = () => {
           className="mt-10 flex flex-col gap-6 font-poppins"
         >
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Name</span>
+            <span className="text-timberWolf font-medium mb-4">
+              {t("contact.form.name")}
+            </span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
-              className="bg-eerieBlack py-4 px-6
-              placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
-              border-none font-medium"
-              required
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your email?"
+              placeholder={t("contact.form.namePlaceholder")}
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
@@ -129,14 +118,31 @@ export const Contact = () => {
           </label>
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">
-              Your Message
+              {t("contact.form.email")}
+            </span>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder={t("contact.form.emailPlaceholder")}
+              className="bg-eerieBlack py-4 px-6
+              placeholder:text-taupe
+              text-timberWolf rounded-lg outline-none
+              border-none font-medium"
+              required
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text-timberWolf font-medium mb-4">
+              {t("contact.form.message")}
             </span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What's your message?"
+              placeholder={t("contact.form.messagePlaceholder")}
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
@@ -165,7 +171,9 @@ export const Contact = () => {
                   .setAttribute("src", send);
               }}
             >
-              {loading ? "Sending" : "Send"}
+              {loading
+                ? t("contact.form.btnSending")
+                : t("contact.form.btnSend")}
               <img
                 src={send}
                 alt="send"
@@ -173,7 +181,7 @@ export const Contact = () => {
                 w-[23px] h-[23px] object-contain transition duration-200"
               />
             </button>
-            <span>OR</span>
+            <span>{t("contact.or")}</span>
             <a
               href="https://t.me/igoora"
               target="_blank"

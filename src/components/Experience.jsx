@@ -66,61 +66,70 @@ ExperienceCard.propTypes = {
 
 const Experience = () => {
   const { t } = useTranslation();
-  {
-    t("hero.IH");
-  }
   const experiences = [
     {
-      title: "Web Developer",
-      company_name: "GoIT",
+      title: t("experience.tittle.web"),
+      company_name: t("experience.company.goit"),
       icon: goIt,
       iconBg: "#333333",
-      date: "Sep 2022 - Dec 2022",
+      date: `${t("experience.month.september")} 2022 - ${t(
+        "experience.month.december"
+      )} 2022`,
     },
     {
-      title: "JavaScript Developer",
-      company_name: "GoIT",
+      title: t("experience.tittle.java"),
+      company_name: t("experience.company.goit"),
       icon: goIt,
       iconBg: "#333333",
-      date: "Jan 2023 - Mar 2023",
+      date: `${t("experience.month.january")} 2023 - ${t(
+        "experience.month.march"
+      )} 2023`,
     },
     {
-      title: "ReactJS Developer",
-      company_name: "GoIT",
+      title: t("experience.tittle.react"),
+      company_name: t("experience.company.goit"),
       icon: goIt,
       iconBg: "#333333",
-      date: "Apr 2023 - Jun 2023",
+      date: `${t("experience.month.april")} 2023 - ${t(
+        "experience.month.june"
+      )} 2023`,
     },
     {
-      title: "NodeJS Developer",
-      company_name: "GoIT",
+      title: t("experience.tittle.node"),
+      company_name: t("experience.company.goit"),
       icon: goIt,
       iconBg: "#333333",
-      date: "Jun 2023 - Jul 2023",
+      date: `${t("experience.month.june")} 2023 - ${t(
+        "experience.month.july"
+      )} 2023`,
     },
     {
-      title: "Team Leader",
-      company_name: "GoIT",
+      title: t("experience.tittle.team"),
+      company_name: t("experience.company.goit"),
       icon: goIt,
       iconBg: "#333333",
-      date: "Jul 2023 - Aug 2023",
+      date: `${t("experience.month.july")} 2023 - ${t(
+        "experience.month.august"
+      )} 2023`,
     },
     {
-      title: "Full Stack Developer",
-      company_name: "GoIT",
+      title: t("experience.tittle.full"),
+      company_name: t("experience.company.goit"),
       icon: goIt,
       iconBg: "#333333",
-      date: "Aug 2023 - Sep 2023",
+      date: `${t("experience.month.august")} 2023 - ${t(
+        "experience.month.september"
+      )} 2023`,
     },
   ];
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
-          What I&apos;ve done so far
+          {t("experience.par")}
         </p>
         <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
-          Experience
+          {t("experience.header")}
         </h2>
       </motion.div>
 
@@ -179,7 +188,7 @@ const Experience = () => {
                   .setAttribute("src", download);
               }}
             >
-              MY RESUME
+              {t("experience.resume")}
               <img
                 src={download}
                 alt="download"
