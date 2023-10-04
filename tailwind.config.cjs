@@ -61,7 +61,7 @@ export default {
         mova: ["Mova"],
         overcameBold: ["Overcame Bold"],
         overcameOutline: ["Overcame Outline"],
-        poppins: ["Poppins", "sans-serif"],
+        poppins: ["Svoboda"],
       },
     },
   },

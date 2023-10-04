@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Bangbang';
+    src: url('Bangbang-Regular.eot');
+    src: local('Bangbang Regular'), local('Bangbang-Regular'),
+        url('Bangbang-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Bangbang-Regular.woff2') format('woff2'),
+        url('Bangbang-Regular.woff') format('woff'),
+        url('Bangbang-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bangbang';
+    src: url('Bangbang-OutlineItalic.eot');
+    src: local('Bangbang Outline Italic'), local('Bangbang-OutlineItalic'),
+        url('Bangbang-OutlineItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bangbang-OutlineItalic.woff2') format('woff2'),
+        url('Bangbang-OutlineItalic.woff') format('woff'),
+        url('Bangbang-OutlineItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bangbang';
+    src: url('Bangbang-BoldItalic.eot');
+    src: local('Bangbang Bold Italic'), local('Bangbang-BoldItalic'),
+        url('Bangbang-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Bangbang-BoldItalic.woff2') format('woff2'),
+        url('Bangbang-BoldItalic.woff') format('woff'),
+        url('Bangbang-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bangbang';
+    src: url('Bangbang-Outline.eot');
+    src: local('Bangbang Outline'), local('Bangbang-Outline'),
+        url('Bangbang-Outline.eot?#iefix') format('embedded-opentype'),
+        url('Bangbang-Outline.woff2') format('woff2'),
+        url('Bangbang-Outline.woff') format('woff'),
+        url('Bangbang-Outline.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bangbang';
+    src: url('Bangbang-Italic.eot');
+    src: local('Bangbang Italic'), local('Bangbang-Italic'),
+        url('Bangbang-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Bangbang-Italic.woff2') format('woff2'),
+        url('Bangbang-Italic.woff') format('woff'),
+        url('Bangbang-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bangbang';
+    src: url('Bangbang-Bold.eot');
+    src: local('Bangbang Bold'), local('Bangbang-Bold'),
+        url('Bangbang-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Bangbang-Bold.woff2') format('woff2'),
+        url('Bangbang-Bold.woff') format('woff'),
+        url('Bangbang-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+

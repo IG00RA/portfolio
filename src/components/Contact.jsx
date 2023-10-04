@@ -150,14 +150,14 @@ export const Contact = () => {
               required
             />
           </label>
-          <div className="flex justify-start items-center gap-1 lxs:gap-3 xs:gap-5">
+          <div className="flex flex-wrap flex-col xs:flex-row justify-start items-center gap-1 lxs:gap-3 xs:gap-5">
             <button
               type="submit"
               className="live-demo flex justify-center sm:gap-4 
               gap-3 sm:text-[20px] text-[16px] text-timberWolf 
               font-bold font-beckman items-center py-5
-              whitespace-nowrap sm:w-[130px] sm:h-[50px] 
-              w-[100px] h-[45px] rounded-[10px] bg-night 
+              whitespace-nowrap sm:w-[160px] sm:h-[50px] 
+              w-[150px] h-[45px] rounded-[10px] bg-night 
               hover:bg-battleGray hover:text-eerieBlack 
               transition duration-[0.2s] ease-in-out"
               onMouseOver={() => {
@@ -182,34 +182,36 @@ export const Contact = () => {
               />
             </button>
             <span>{t("contact.or")}</span>
-            <a
-              href="https://t.me/igoora"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex justify-center w-[50px] h-[50px] rounded-[10px] items-center bg-night 
+            <div className="flex justify-start items-center gap-1 lxs:gap-3 xs:gap-5">
+              <a
+                href="https://t.me/igoora"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-center w-[50px] h-[50px] rounded-[10px] items-center bg-night 
               hover:bg-battleGray hover:text-eerieBlack 
               transition duration-[0.2s] ease-in-out"
-            >
-              <img
-                src={telegram}
-                alt="Telegram"
-                className="w-[30px] h-[30px] object-contain transition duration-200"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/igoora/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex justify-center w-[50px] h-[50px] rounded-[10px] items-center bg-night 
+              >
+                <img
+                  src={telegram}
+                  alt="Telegram"
+                  className="w-[30px] h-[30px] object-contain transition duration-200"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/igoora/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-center w-[50px] h-[50px] rounded-[10px] items-center bg-night 
               hover:bg-battleGray hover:text-eerieBlack 
               transition duration-[0.2s] ease-in-out"
-            >
-              <img
-                src={linkedin}
-                alt="LinkedIn"
-                className="w-[35px] h-[35px] object-contain transition duration-200"
-              />
-            </a>
+              >
+                <img
+                  src={linkedin}
+                  alt="LinkedIn"
+                  className="w-[35px] h-[35px] object-contain transition duration-200"
+                />
+              </a>
+            </div>
           </div>
         </form>
       </div>

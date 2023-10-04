@@ -4,6 +4,7 @@ import { close, menu, logo, logoText, email, phone } from "../../img";
 import {
   ContactItem,
   IconWrap,
+  LogoWrap,
   NavLink,
   NavLinks,
   NavLinksWrap,
@@ -46,19 +47,21 @@ const Navbar = ({ toggle, setToggle }) => {
     },
   ];
   return (
-    <StyledDesktopNav className={`${styles.paddingX}`}>
+    <StyledDesktopNav>
       <NavWrapper>
-        <LanguageToggler />
-        <StyledLink
-          to="/"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <StyledSmallLogo src={logo} alt="logo" />
-          <StyledLogoText src={logoText} alt="logo" />
-        </StyledLink>
+        <LogoWrap>
+          <StyledLink
+            to="/"
+            onClick={() => {
+              setActive("");
+              window.scrollTo(0, 0);
+            }}
+          >
+            <StyledSmallLogo src={logo} alt="logo" />
+            <StyledLogoText src={logoText} alt="logo" />
+          </StyledLink>
+          <LanguageToggler />
+        </LogoWrap>
         <StyledUl>
           {navLinks.map((nav) => (
             <StyledDesktopListItem

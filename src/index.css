@@ -6,17 +6,22 @@
 
 @font-face {
   font-family: "Arenq";
-  src: url("./fonts/arenq.otf");
+  src: url("./fonts/constacia-modern-deco.ttf");
 }
 
 @font-face {
   font-family: "Mova";
-  src: url("./fonts/mova.otf");
+  src: url("./fonts/theater.ttf");
+}
+
+@font-face {
+  font-family: "Svoboda";
+  src: url("./fonts/svoboda.ttf");
 }
 
 @font-face {
   font-family: "Beckman";
-  src: url("./fonts/beckman.otf");
+  src: url("./fonts/angrybirds-regular3.ttf");
 }
 
 @font-face {

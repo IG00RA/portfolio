@@ -11,9 +11,15 @@ export const StyledDesktopNav = styled.nav`
   z-index: 20;
   background-color: rgb(244 244 246);
   opacity: 0.97;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   @media (max-width: 639px) {
     height: 12vh;
+  }
+  @media (min-width: 768px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 `;
 export const NavWrapper = styled.div`
@@ -29,14 +35,10 @@ export const StyledLogoText = styled.img`
   height: 85px;
   margin-left: 0.6rem;
   object-fit: contain;
-
-  @media (min-width: 640px) {
-    display: none;
-    width: 90px;
-    height: 90px;
-  }
   @media (min-width: 768px) {
     display: block;
+    width: 90px;
+    height: 90px;
   }
 `;
 export const StyledSmallLogo = styled.img`
@@ -56,15 +58,27 @@ export const StyledLink = styled(Link)`
   gap: 5px;
 `;
 
+export const LogoWrap = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
 export const StyledUl = styled.ul`
   list-style: none;
   display: none;
-
+  margin-left: 44px;
   @media (min-width: 640px) {
     display: flex;
     flex-direction: row;
-    gap: 3.5rem;
+    gap: 1rem;
     margin-top: 0.5rem;
+  }
+  @media (min-width: 768px) {
+    gap: 2rem;
+    margin-left: 0px;
+  }
+  @media (min-width: 900px) {
+    gap: 3.5rem;
   }
 `;
 
@@ -192,7 +206,7 @@ export const StyledListItem = styled.li`
 
 export const StyledDesktopListItem = styled.li`
   color: rgb(31 31 31);
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 500;
   font-family: "Mova";
   text-transform: uppercase;
@@ -200,6 +214,9 @@ export const StyledDesktopListItem = styled.li`
   cursor: pointer;
   position: relative;
   transition: color 0.3s ease;
+  @media (min-width: 768px) {
+    font-size: 21px;
+  }
   &:hover {
     color: rgb(181 181 186);
   }
