@@ -14,7 +14,7 @@ export const LanguageToggler = () => {
   };
 
   return (
-    <button type="button" onClick={toggleLanguage}>
+    <button type="button" onClick={toggleLanguage} aria-label="Toggle Language">
       {currentLanguage === "uk" ? (
         <LangIcon>
           <use href={sprite + "#icon-united-kingdom"}></use>

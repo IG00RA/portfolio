@@ -97,6 +97,15 @@
       "btnSending": "Sending",
       "btnSend": "Send"
     },
-    "or": "OR"
+    "or": "OR",
+    "notiflixFail": {
+      "email": "Please enter a valid email address.",
+      "name": "Name must be at least 3 characters long.",
+      "message": "Message must be at least 10 characters long.",
+      "other": "Something went wrong. Please try again."
+    },
+    "notiflixOk": {
+      "success": "Thank you. Your message is already flying to me."
+    }
   }
 }

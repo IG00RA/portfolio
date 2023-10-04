@@ -59,7 +59,7 @@ const Hero = () => {
         </HeroTextWrap>
 
         <ScrollWrap className="absolute w-full flex justify-center items-center">
-          <a href="#about">
+          <a href="#about" aria-label="Scroll to About section">
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-french border-dim flex justify-center items-start p-2">
               <motion.div
                 animate={{

@@ -33,19 +33,19 @@ export const Contact = () => {
 
     if (!validateEmail(form.email)) {
       setLoading(false);
-      Notiflix.Notify.failure("Please enter a valid email address.");
+      Notiflix.Notify.failure(t("contact.notiflixFail.email"));
       return;
     }
 
     if (form.name.length < 3) {
       setLoading(false);
-      Notiflix.Notify.failure("Name must be at least 3 characters long.");
+      Notiflix.Notify.failure(t("contact.notiflixFail.name"));
       return;
     }
 
     if (form.message.length < 10) {
       setLoading(false);
-      Notiflix.Notify.failure("Message must be at least 10 characters long.");
+      Notiflix.Notify.failure(t("contact.notiflixFail.message"));
       return;
     }
 
@@ -67,9 +67,7 @@ export const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          Notiflix.Notify.success(
-            "Thank you. Your message is already flying to me."
-          );
+          Notiflix.Notify.success(t("contact.notiflixOk.success"));
 
           setForm({
             name: "",
@@ -80,7 +78,7 @@ export const Contact = () => {
         (error) => {
           setLoading(false);
           console.log(error);
-          Notiflix.Notify.failure("Something went wrong. Please try again.");
+          Notiflix.Notify.failure(t("contact.notiflixFail.other"));
         }
       );
   };
@@ -152,6 +150,7 @@ export const Contact = () => {
           </label>
           <div className="flex flex-wrap flex-col xs:flex-row justify-start items-center gap-1 lxs:gap-3 xs:gap-5">
             <button
+              aria-label="Download Resume"
               type="submit"
               className="live-demo flex justify-center sm:gap-4 
               gap-3 sm:text-[20px] text-[16px] text-timberWolf 
