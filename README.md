@@ -2,8 +2,8 @@
 
 Welcome to my Full Stack developer portfolio! This repository contains a website showcasing my projects and information about me as a professional developer.
 
-![portfolio-uk-1](./src/img/readme/mob-uk-1.jpg)
-![portfolio-uk-2](./src/img/readme/mob-uk-2.jpg)
+![portfolio-uk-1](./src/img/readme/mob-uk-1.webp)
+![portfolio-uk-2](./src/img/readme/mob-uk-2.webp)
 
 ## Built With
 
