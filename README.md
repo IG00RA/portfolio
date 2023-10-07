@@ -1,6 +1,6 @@
 # My Full Stack Developer Portfolio
 
-Welcome to my Full Stack developer portfolio! This repository contains a website showcasing my projects and information about me as a professional developer.The site has implemented the possibility to choose the interface language.
+Welcome to my Full Stack developer portfolio! This repository contains a website showcasing my projects and information about me as a professional developer.The site has a responsive design and the ability to choose the interface language has been implemented.
 
 ![portfolio-uk-1](./src/img/readme/mob-uk-1.webp)
 ![portfolio-uk-2](./src/img/readme/mob-uk-2.webp)
