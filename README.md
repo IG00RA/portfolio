@@ -1,6 +1,6 @@
 # My Full Stack Developer Portfolio
 
-Welcome to my Full Stack developer portfolio! This repository contains a website showcasing my projects and information about me as a professional developer.
+Welcome to my Full Stack developer portfolio! This repository contains a website showcasing my projects and information about me as a professional developer.The site has implemented the possibility to choose the interface language.
 
 ![portfolio-uk-1](./src/img/readme/mob-uk-1.webp)
 ![portfolio-uk-2](./src/img/readme/mob-uk-2.webp)
@@ -11,6 +11,7 @@ Welcome to my Full Stack developer portfolio! This repository contains a website
 - Framer Motion
 - TailwindCSS
 - Styled Components
+- i18next
 
 ## Live Demo
 
