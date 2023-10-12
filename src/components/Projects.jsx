@@ -51,7 +51,7 @@ export const Projects = () => {
       description: t("projects.sites.description.carRent"),
       image: carRent,
       repo: "https://github.com/IG00RA/test_car_rent",
-      demo: "https://ig00ra.github.io/test_car_rent/",
+      demo: "https://drive-star.vercel.app/",
     },
     {
       id: "project-5",
@@ -74,8 +74,8 @@ export const Projects = () => {
       name: t("projects.sites.name.movieFinder"),
       description: t("projects.sites.description.movieFinder"),
       image: movieSearch,
-      repo: "https://ig00ra.github.io/goit-react-hw-05-movies",
-      demo: "https://github.com/IG00RA/goit-react-hw-05-movies",
+      repo: "https://github.com/IG00RA/goit-react-hw-05-movies",
+      demo: "https://ig00ra.github.io/goit-react-hw-05-movies",
     },
     {
       id: "project-8",
