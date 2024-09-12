@@ -49,8 +49,11 @@ import typescript from "./tech/typescript.webp";
 import graphql from "./tech/graphql.webp";
 import postgresql from "./tech/postgresql.webp";
 import rubyrails from "./tech/rubyrails.webp";
+import strapi from "./tech/strapi.png";
+import three from "./tech/three.png";
 
 import goIt from "./company/goIt.webp";
+import horizon from "./company/logo.webp";
 
 import filmoteka from "./projects/filmoteka.webp";
 import carRent from "./projects/car-rent.webp";
@@ -62,6 +65,8 @@ import phoneBook from "./projects/phone-book.webp";
 import webStudio from "./projects/web-studio.webp";
 
 export {
+  three,
+  strapi,
   goIt,
   webStudio,
   phoneBook,
@@ -118,4 +123,5 @@ export {
   linkedin,
   linkedinHover,
   loaderMain,
+  horizon,
 };

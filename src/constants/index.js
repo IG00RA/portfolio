@@ -7,6 +7,8 @@ import {
   nodejs,
   git,
   docker,
+  three,
+  strapi,
 } from "../img";
 
 const technologies = [
@@ -38,7 +40,14 @@ const technologies = [
     name: "git",
     icon: git,
   },
-
+  {
+    name: "three",
+    icon: three,
+  },
+  {
+    name: "strapi",
+    icon: strapi,
+  },
   {
     name: "docker",
     icon: docker,

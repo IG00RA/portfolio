@@ -31,11 +31,11 @@ export const Projects = () => {
     },
     {
       id: "project-2",
-      name: t("projects.sites.name.taskManager"),
-      description: t("projects.sites.description.taskManager"),
-      image: goose,
-      repo: "https://github.com/IG00RA/project-team_5_frontend",
-      demo: "https://ig00ra.github.io/project-team_5_frontend/",
+      name: t("projects.sites.name.carRent"),
+      description: t("projects.sites.description.carRent"),
+      image: carRent,
+      repo: "https://www.horizonlegend.com/",
+      demo: "https://horizonlegend.com/",
     },
     {
       id: "project-3",
@@ -47,11 +47,11 @@ export const Projects = () => {
     },
     {
       id: "project-4",
-      name: t("projects.sites.name.carRent"),
-      description: t("projects.sites.description.carRent"),
-      image: carRent,
-      repo: "https://github.com/IG00RA/test_car_rent",
-      demo: "https://drive-star.vercel.app/",
+      name: t("projects.sites.name.taskManager"),
+      description: t("projects.sites.description.taskManager"),
+      image: goose,
+      repo: "https://github.com/IG00RA/project-team_5_frontend",
+      demo: "https://ig00ra.github.io/project-team_5_frontend/",
     },
     {
       id: "project-5",

@@ -62,7 +62,9 @@ const BallCanvas = ({ icon }) => {
     </Canvas>
   );
 };
+
 BallCanvas.propTypes = {
-  icon: PropTypes.string.isRequired, // icon повинно бути рядком та обов'язковим пропом
+  icon: PropTypes.string.isRequired,
 };
+
 export default BallCanvas;

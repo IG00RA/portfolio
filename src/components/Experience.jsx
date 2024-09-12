@@ -10,7 +10,7 @@ import { download, downloadHover, resume } from "../img";
 import { textVariant } from "../utils/motion";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
-import { goIt } from "../img";
+import { goIt, horizon } from "../img";
 
 export const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -121,6 +121,15 @@ const Experience = () => {
         "experience.month.september"
       )} 2023`,
     },
+    {
+      title: t("experience.tittle.full"),
+      company_name: t("experience.company.horizon"),
+      icon: horizon,
+      iconBg: "#333333",
+      date: `${t("experience.month.december")} 2023 - ${t(
+        "experience.month.october"
+      )} 2024`,
+    },
   ];
   return (
     <>
@@ -173,7 +182,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1UOgDYkbJblXBr56b-CZaV6ewm1Ve9t_y/",
+                  "drivehttps://drive.google.com/file/d/1knL0MhQ3czSPxWh0vARJfRowrx840nK9",
                   "_blank"
                 )
               }

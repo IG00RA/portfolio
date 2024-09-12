@@ -38,7 +38,7 @@
         "filmoteka": "Filmoteka",
         "taskManager": "Task manager",
         "mimino": "Mimino",
-        "carRent": "Car rent portal",
+        "carRent": "Horizon: Legend of Clans",
         "imageFinder": "Fast image finder",
         "web": "Web studio",
         "movieFinder": "Movie finder site",
@@ -48,7 +48,7 @@
         "filmoteka": "Discover, explore, and enjoy the world of cinema with Filmoteka!",
         "taskManager": "The GooseTrack application is a powerful tool for task planning.",
         "mimino": "Restaurant-hotel complex",
-        "carRent": "DriveStar Car Rental. your premier destination for luxury car rentals.",
+        "carRent": "Horizon: Legend of Clans offers an immersive world where technology and magic intertwine.",
         "imageFinder": "This is a demo website for a image finder portal.",
         "web": "Web studio site - effective solutions for your business",
         "movieFinder": "Demo site - movie search",
@@ -68,7 +68,7 @@
       "team": "Team Leader",
       "full": "Full Stack Developer"
     },
-    "company": { "goit": "GoIT" },
+    "company": { "goit": "GoIT", "horizon": "Horizon Games LLC" },
     "month": {
       "january": "Jan",
       "february": "Feb",
