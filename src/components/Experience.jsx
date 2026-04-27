@@ -10,7 +10,7 @@ import { download, downloadHover, resume } from "../img";
 import { textVariant } from "../utils/motion";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
-import { goIt, horizon } from "../img";
+import { goIt, horizon, mustage } from "../img";
 
 export const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -68,57 +68,12 @@ const Experience = () => {
   const { t } = useTranslation();
   const experiences = [
     {
-      title: t("experience.tittle.web"),
+      title: t("experience.tittle.fullCourse"),
       company_name: t("experience.company.goit"),
       icon: goIt,
       iconBg: "#333333",
       date: `${t("experience.month.september")} 2022 - ${t(
-        "experience.month.december"
-      )} 2022`,
-    },
-    {
-      title: t("experience.tittle.java"),
-      company_name: t("experience.company.goit"),
-      icon: goIt,
-      iconBg: "#333333",
-      date: `${t("experience.month.january")} 2023 - ${t(
-        "experience.month.march"
-      )} 2023`,
-    },
-    {
-      title: t("experience.tittle.react"),
-      company_name: t("experience.company.goit"),
-      icon: goIt,
-      iconBg: "#333333",
-      date: `${t("experience.month.april")} 2023 - ${t(
-        "experience.month.june"
-      )} 2023`,
-    },
-    {
-      title: t("experience.tittle.node"),
-      company_name: t("experience.company.goit"),
-      icon: goIt,
-      iconBg: "#333333",
-      date: `${t("experience.month.june")} 2023 - ${t(
-        "experience.month.july"
-      )} 2023`,
-    },
-    {
-      title: t("experience.tittle.team"),
-      company_name: t("experience.company.goit"),
-      icon: goIt,
-      iconBg: "#333333",
-      date: `${t("experience.month.july")} 2023 - ${t(
-        "experience.month.august"
-      )} 2023`,
-    },
-    {
-      title: t("experience.tittle.full"),
-      company_name: t("experience.company.goit"),
-      icon: goIt,
-      iconBg: "#333333",
-      date: `${t("experience.month.august")} 2023 - ${t(
-        "experience.month.september"
+        "experience.month.september",
       )} 2023`,
     },
     {
@@ -127,8 +82,15 @@ const Experience = () => {
       icon: horizon,
       iconBg: "#333333",
       date: `${t("experience.month.december")} 2023 - ${t(
-        "experience.month.october"
+        "experience.month.october",
       )} 2024`,
+    },
+    {
+      title: t("experience.tittle.full"),
+      company_name: t("experience.company.mustage"),
+      icon: mustage,
+      iconBg: "#333333",
+      date: `${t("experience.month.november")} 2024 - ...`,
     },
   ];
   return (
@@ -183,7 +145,7 @@ const Experience = () => {
               onClick={() =>
                 window.open(
                   "https://drive.google.com/file/d/1d7PvA9J1XmxpcwBNPuEOOUlnTGFqLm0i",
-                  "_blank"
+                  "_blank",
                 )
               }
               onMouseOver={() => {

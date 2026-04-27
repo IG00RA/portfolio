@@ -11,6 +11,12 @@ import {
   goose,
   carRent,
   filmoteka,
+  creonix,
+  education,
+  facebook,
+  team,
+  cert,
+  vacancy,
 } from "../img";
 import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 import { ProjectCard } from "./ProjectCard";
@@ -23,6 +29,54 @@ export const Projects = () => {
   const projects = [
     {
       id: "project-1",
+      name: t("projects.sites.name.vacancy"),
+      description: t("projects.sites.description.vacancy"),
+      image: vacancy,
+      repo: "https://vacancies.mustage.team/uk",
+      demo: "https://vacancies.mustage.team/uk",
+    },
+    {
+      id: "project-2",
+      name: t("projects.sites.name.creonix"),
+      description: t("projects.sites.description.creonix"),
+      image: creonix,
+      repo: "https://creonix.io/",
+      demo: "https://creonix.io/",
+    },
+    {
+      id: "project-3",
+      name: t("projects.sites.name.education"),
+      description: t("projects.sites.description.education"),
+      image: education,
+      repo: "https://education.mustage.team/",
+      demo: "https://education.mustage.team/",
+    },
+    {
+      id: "project-4",
+      name: t("projects.sites.name.facebook"),
+      description: t("projects.sites.description.facebook"),
+      image: facebook,
+      repo: "https://study.mustage.team",
+      demo: "https://study.mustage.team",
+    },
+    {
+      id: "project-5",
+      name: t("projects.sites.name.team"),
+      description: t("projects.sites.description.team"),
+      image: team,
+      repo: "mustage.team",
+      demo: "mustage.team",
+    },
+    {
+      id: "project-6",
+      name: t("projects.sites.name.cert"),
+      description: t("projects.sites.description.cert"),
+      image: cert,
+      repo: "https://verify.mustage.team/uk",
+      demo: "https://verify.mustage.team/uk",
+    },
+    {
+      id: "project-7",
       name: t("projects.sites.name.filmoteka"),
       description: t("projects.sites.description.filmoteka"),
       image: filmoteka,
@@ -30,7 +84,7 @@ export const Projects = () => {
       demo: "https://julieshapo.github.io/5th-element-filmoteka/",
     },
     {
-      id: "project-2",
+      id: "project-8",
       name: t("projects.sites.name.carRent"),
       description: t("projects.sites.description.carRent"),
       image: carRent,
@@ -38,7 +92,7 @@ export const Projects = () => {
       demo: "https://horizonlegend.com/",
     },
     {
-      id: "project-3",
+      id: "project-9",
       name: t("projects.sites.name.mimino"),
       description: t("projects.sites.description.mimino"),
       image: mimino,
@@ -46,7 +100,7 @@ export const Projects = () => {
       demo: "https://ig00ra.github.io/mi-6/",
     },
     {
-      id: "project-4",
+      id: "project-10",
       name: t("projects.sites.name.taskManager"),
       description: t("projects.sites.description.taskManager"),
       image: goose,
@@ -54,7 +108,7 @@ export const Projects = () => {
       demo: "https://ig00ra.github.io/project-team_5_frontend/",
     },
     {
-      id: "project-5",
+      id: "project-11",
       name: t("projects.sites.name.imageFinder"),
       description: t("projects.sites.description.imageFinder"),
       image: imgFinder,
@@ -62,7 +116,7 @@ export const Projects = () => {
       demo: "https://ig00ra.github.io/goit-react-hw-04-images/",
     },
     {
-      id: "project-6",
+      id: "project-12",
       name: t("projects.sites.name.web"),
       description: t("projects.sites.description.web"),
       image: webStudio,
@@ -70,7 +124,7 @@ export const Projects = () => {
       demo: "https://ig00ra.github.io/goit-markup-hw-08/",
     },
     {
-      id: "project-7",
+      id: "project-13",
       name: t("projects.sites.name.movieFinder"),
       description: t("projects.sites.description.movieFinder"),
       image: movieSearch,
@@ -78,7 +132,7 @@ export const Projects = () => {
       demo: "https://ig00ra.github.io/goit-react-hw-05-movies",
     },
     {
-      id: "project-8",
+      id: "project-14",
       name: t("projects.sites.name.phoneBook"),
       description: t("projects.sites.description.phoneBook"),
       image: phoneBook,

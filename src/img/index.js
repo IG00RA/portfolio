@@ -54,7 +54,14 @@ import three from "./tech/three.png";
 
 import goIt from "./company/goIt.webp";
 import horizon from "./company/logo.webp";
+import mustage from "./company/mustage.webp";
 
+import creonix from "./projects/creonix.webp";
+import education from "./projects/education.webp";
+import facebook from "./projects/facebook.webp";
+import team from "./projects/team.webp";
+import cert from "./projects/cert.webp";
+import vacancy from "./projects/vacancy.webp";
 import filmoteka from "./projects/filmoteka.webp";
 import carRent from "./projects/car-rent.webp";
 import goose from "./projects/goose.webp";
@@ -65,6 +72,12 @@ import phoneBook from "./projects/phone-book.webp";
 import webStudio from "./projects/web-studio.webp";
 
 export {
+  creonix,
+  education,
+  facebook,
+  team,
+  cert,
+  vacancy,
   three,
   strapi,
   goIt,
@@ -124,4 +137,5 @@ export {
   linkedinHover,
   loaderMain,
   horizon,
+  mustage,
 };

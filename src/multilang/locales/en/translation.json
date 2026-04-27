@@ -35,6 +35,12 @@
     "button": "LIVE DEMO",
     "sites": {
       "name": {
+        "vacancy": "Mustage Vacancy",
+        "creonix": "Creonix IO",
+        "education": "Arbitrage course",
+        "facebook": "Arbitrage Facebook",
+        "team": "Mustage Team",
+        "cert": "Certificate Verification",
         "filmoteka": "Filmoteka",
         "taskManager": "Task manager",
         "mimino": "Mimino",
@@ -45,6 +51,12 @@
         "phoneBook": "Phone Book"
       },
       "description": {
+        "vacancy": "the perfect place for career growth in the IT industry",
+        "creonix": "Create hundreds of unique adaptations for your ads in minutes",
+        "education": "FREE traffic arbitrage course with minimal consumables and the opportunity to join a closed community",
+        "facebook": "Take a FREE traffic arbitrage course, after which you will be able to effectively manage your advertising budget.",
+        "team": "Mustage Team is a platform that connects advertisers with top-tier media buyers, fostering collaboration and driving successful advertising campaigns.",
+        "cert": "Mustage Academy Certificate Verification",
         "filmoteka": "Discover, explore, and enjoy the world of cinema with Filmoteka!",
         "taskManager": "The GooseTrack application is a powerful tool for task planning.",
         "mimino": "Restaurant-hotel complex",
@@ -66,9 +78,14 @@
       "react": "ReactJS Developer",
       "node": "NodeJS Developer",
       "team": "Team Leader",
-      "full": "Full Stack Developer"
+      "full": "Full Stack Developer",
+      "fullCourse": "Full Stack Developer Course"
     },
-    "company": { "goit": "GoIT", "horizon": "Horizon Games LLC" },
+    "company": {
+      "goit": "GoIT",
+      "horizon": "Horizon Games LLC",
+      "mustage": "Mustage Team"
+    },
     "month": {
       "january": "Jan",
       "february": "Feb",
