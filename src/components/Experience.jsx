@@ -90,7 +90,7 @@ const Experience = () => {
       company_name: t("experience.company.mustage"),
       icon: mustage,
       iconBg: "#333333",
-      date: `${t("experience.month.november")} 2024 - ...`,
+      date: `${t("experience.month.november")} 2024 - ${t("experience.month.october")} 2026`,
     },
   ];
   return (
