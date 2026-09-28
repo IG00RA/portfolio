@@ -144,7 +144,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1l7uBgo-pybz_jfzUcPy9K_CJZU1O7qI3",
+                  "https://drive.google.com/file/d/1y4_PLxgymgGSy6SBRXgb58M0VQ4hjfa5",
                   "_blank",
                 )
               }
