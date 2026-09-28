@@ -81,7 +81,7 @@ const Experience = () => {
       company_name: t("experience.company.horizon"),
       icon: horizon,
       iconBg: "#333333",
-      date: `${t("experience.month.december")} 2023 - ${t(
+      date: `${t("experience.month.september")} 2023 - ${t(
         "experience.month.october",
       )} 2024`,
     },
@@ -144,7 +144,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1bdVUOH_YSANpcHiEBwuGuxjcvxB5DQTE",
+                  "https://drive.google.com/file/d/1F6e33H4ThsvH24UZldmdshtRLQ-TXITS",
                   "_blank",
                 )
               }
