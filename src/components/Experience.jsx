@@ -90,7 +90,7 @@ const Experience = () => {
       company_name: t("experience.company.mustage"),
       icon: mustage,
       iconBg: "#333333",
-      date: `${t("experience.month.november")} 2024 - ${t("experience.month.october")} 2026`,
+      date: `${t("experience.month.november")} 2024 - ${t("experience.month.september")} 2026`,
     },
   ];
   return (
@@ -144,7 +144,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1F6e33H4ThsvH24UZldmdshtRLQ-TXITS",
+                  "https://drive.google.com/file/d/1l7uBgo-pybz_jfzUcPy9K_CJZU1O7qI3",
                   "_blank",
                 )
               }
